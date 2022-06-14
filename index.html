@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hackchat - sharding assignment</title>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="./js/client.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/all.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="main-box">
+        <h1>Chat Box</h1>
+        <div class="info">Info...</div>
+        <div class="container"></div>
+        <div class="send-box">
+            <div class="dc">
+                <div id="user-lists">
+                    
+                </div>
+            </div>
+            <form action="" class="send-form" id="send-form">
+                <div class="formatting">
+                    <ul>
+                        <li><button id="bold" class="fbtn fa-solid fa-bold"></button></li>
+                        <li><button id="italic" class="fbtn fa-solid fa-italic"></button></li>
+                        <li><button id="strike" class="fbtn fa-solid fa-strikethrough"></button></li>|
+                        <li><button id="hlink" class="fbtn fa-solid fa-link"></button></li>|
+                        <li><button id="olist" class="fbtn fa-solid fa-list-ol"> </button></li>
+                        <li><button id="ulist" class="fbtn fa-solid fa-list"> </button></li>|
+                        <li><button id="quote" class="fbtn fa-solid fa-quote-left"> </button></li>|
+                        <li><button id="code" class="fbtn fa-solid fa-code"> </button></li>
+                        <li><button id="cblock" class="fbtn fa-solid fa-file-code"> </button></li>
+                    </ul>
+                </div>
+                <div class="inp">
+                    <div id="msg-inp" placeholder="Chat comes here..." contenteditable="true"></div>
+                </div>
+                <div class="more">
+                    <ul>
+                        <li><button id="add-file" class="fbtn fa-solid fa-circle-plus"></button> </li>|
+                        <li><button id="add-emoji" class="fbtn fa-solid fa-face-smile"></button> </li>|
+                        <li><button id="at" class="fbtn fa-solid fa-at"></button> </li>
+                    </ul>
+                    <button id="send-btn" class="btn" type="submit"><img src="./images/send1.png" alt="Error"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="open-file" class="Modal is-hidden is-visuallyHidden">
+        <div class="file-description">
+            <div onclick="close_modal()" class="Close">&times;</div>
+            <input type="file" id="files" name="files"/>
+            <button id="send-files" class="btn"><img src="./images/send1.png" alt="Error"></button>
+        </div>
+    </div>
+
+    <script src="./js/Emojis.js"></script>
+    <script type="text/javascript">
+        new EmojiPicker({
+            trigger: [
+                {
+                    selector: '#add-emoji',
+                    insertInto: ['#msg-inp']
+                },
+            ],
+            closeButton: true,
+        });
+
+    </script>
+</body>
+</html>

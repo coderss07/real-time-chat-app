@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "a chat web application where 2 or more users can chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sarthak Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.16",
+    "socket.io": "^4.5.1",
+    "tinymce": "^6.0.3"
+  }
+}
