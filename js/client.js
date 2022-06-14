@@ -255,7 +255,11 @@ document.querySelector('#at').addEventListener('click', (e) => {
             }
         }
         var obj = document.querySelector('#user-lists');
-        obj.innerHTML = elem;
+        if(elem == "") {
+            obj.innerHTML = `No user found...`;
+        }else {
+            obj.innerHTML = `<ul>${elem}</ul>`;
+        }
         obj.style.display = 'inline';
     })
 })

@@ -1,18 +1,25 @@
 {
-  "name": "server",
+  "name": "chatbox",
   "version": "1.0.0",
-  "description": "a chat web application where 2 or more users can chat",
+  "description": "This is real time multiuser chatting app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/index.js"
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderss07/real-time-chat-app.git"
   },
   "author": "Sarthak Sharma",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderss07/real-time-chat-app/issues"
+  },
+  "homepage": "https://github.com/coderss07/real-time-chat-app#readme",
   "dependencies": {
     "express": "^4.18.1",
     "nodemon": "^2.0.16",
-    "socket.io": "^4.5.1",
-    "tinymce": "^6.0.3"
+    "socket.io": "^4.5.1"
   }
 }

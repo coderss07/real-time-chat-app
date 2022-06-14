@@ -1,14 +1,17 @@
+'use strict';
+
 const express = require('express');
-const socketIO = require('socket.io');
+var path = require('path')
 
 const PORT = process.env.PORT || 3000;
-const INDEX = '/index.html';
 
-const server = express()
-  .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+const app = express();
 
-const io = socketIO(server);
+const server = require('http').createServer(app);
+app.use(express.static(path.join(__dirname, '/')));
+    
+
+const io = require('socket.io')(server);
 
 const users = {};
 
@@ -45,3 +48,5 @@ io.on('connection', socket => {
     })
 
 })
+
+server.listen(PORT, () => console.log(`Listening on ${PORT}`));

@@ -7,9 +7,10 @@
     <title>hackchat - sharding assignment</title>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script defer src="/socket.io/socket.io.js"></script>
-    <script defer src="./js/client.js"></script>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/all.css">
+    <script defer src="js/client.js"></script>
+    <base href="/">
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <link type="text/css" rel="stylesheet" href="styles/all.css">
     <link rel="shortcut icon" href="#">
 </head>
 <body>
@@ -19,9 +20,7 @@
         <div class="container"></div>
         <div class="send-box">
             <div class="dc">
-                <div id="user-lists">
-                    
-                </div>
+                <div id="user-lists">No user found...</div>
             </div>
             <form action="" class="send-form" id="send-form">
                 <div class="formatting">
@@ -55,7 +54,7 @@
         <div class="file-description">
             <div onclick="close_modal()" class="Close">&times;</div>
             <input type="file" id="files" name="files"/>
-            <button id="send-files" class="btn"><img src="./images/send1.png" alt="Error"></button>
+            <button id="send-files" class="btn"><img src="../images/send1.png" alt="Error"></button>
         </div>
     </div>
 
