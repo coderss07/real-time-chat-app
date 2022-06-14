@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8000', {transports: ['websocket', 'polling', 'flashsocket']})
+const socket = io()
 
 const btn = document.querySelector('#send-btn')
 const msg = document.querySelector('#msg-inp')
