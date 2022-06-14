@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build": "ng build",
+    "heroku-postbuild": "ng build --prod"
   },
   "author": "Sarthak Sharma",
   "license": "ISC",
